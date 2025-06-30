@@ -35,15 +35,15 @@ Below is a summary of the projects included in this repository. Each project inc
 
 ### 1. Iris Species Classification
 
+*   **Notebook:** [`iris-project/iris_prediction.ipynb`](./iris-project/iris_prediction.ipynb)
 *   **Objective:** To build a model that can accurately classify the species of an iris flower (*setosa*, *versicolor*, or *virginica*) based on its sepal and petal measurements.
 *   **Model Used:** K-Nearest Neighbors (KNN)
 *   **Key Steps:**
-    *   Performed detailed Exploratory Data Analysis (EDA) to understand feature distributions and relationships.
-    *   Used `StandardScaler` to preprocess the data, a crucial step for distance-based algorithms like KNN.
-    *   Split the data and trained a `KNeighborsClassifier`.
-    *   Evaluated the model using accuracy, a confusion matrix, and a classification report.
-    *   Conducted hyperparameter tuning to find the optimal value for `k` (n_neighbors) and visualized the results to demonstrate the bias-variance tradeoff.
-*   **Notebook:** `iris-project/iris_prediction.ipynb`
+    *   **Exploratory Data Analysis (EDA):** Investigated feature distributions and the relationships between them, revealing strong correlations between petal measurements and the target species.
+    *   **Preprocessing:** Applied `StandardScaler` to the features. This is a crucial step that prevents features with larger scales from disproportionately influencing the distance calculations in the KNN algorithm.
+    *   **Modeling & Evaluation:** Trained a `KNeighborsClassifier` and evaluated its performance using a confusion matrix and classification report, achieving an initial accuracy score.
+    *   **Hyperparameter Tuning:** Systematically tested different values for `k` (n_neighbors) to find the optimal balance between bias and variance, which improved the model's final predictive accuracy.
+*   **Result:** The final model achieved an accuracy of [Your Final Accuracy]% on the test set.
 
 ---
 
