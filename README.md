@@ -10,7 +10,7 @@ My goal is to continuously add new projects, tackling different challenges and e
 
 I am a passionate and aspiring Machine Learning Engineer with a strong foundation in Python and a keen interest in turning data into actionable insights. I enjoy the process of diving deep into data, uncovering patterns, and building models that solve real-world problems.
 
-*   **LinkedIn:**
+*   **LinkedIn:** [linkedin.com/in/amazingpaddy](https://www.linkedin.com/in/amazingpaddy/)
 *   **Email:** padmanabhan5789@gmail.com
 
 ---
@@ -21,7 +21,7 @@ Here are some of the key skills and technologies I've demonstrated in my project
 
 *   **Languages:** Python
 *   **Core Libraries:** Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
-*   **Machine Learning:** Supervised Learning (Classification, Regression), Exploratory Data Analysis (EDA), Feature Scaling, Hyperparameter Tuning
+*   **Machine Learning:** Supervised Learning (Classification, Regression), Exploratory Data Analysis (EDA), Feature Engineering & Selection, Hyperparameter Tuning (Cross-Validation, GridSearchCV), Model Evaluation (Accuracy, Confusion Matrix, Precision-Recall Trade-off)
 *   **Future Learning & Development:**
     *   **Deep Learning Frameworks:** TensorFlow, Keras, PyTorch
     *   **Advanced Topics:** Neural Networks, Computer Vision (CNNs), Natural Language Processing (NLP)
@@ -33,17 +33,28 @@ Here are some of the key skills and technologies I've demonstrated in my project
 
 Below is a summary of the projects included in this repository. Each project includes a detailed notebook with code, visualizations, and explanations.
 
-### 1. Iris Species Classification
+### 1. Breast Cancer Classification: A Study in Model Responsibility
 
-*   **Notebook:** [`iris-project/iris_prediction.ipynb`](./iris-project/iris_prediction.ipynb)
+*   **Notebook:** [`breast-cancer-classification-project/breast_cancer_prediction.ipynb`](./breast-cancer-classification-project/breast_cancer_prediction.ipynb)
+*   **Objective:** To build a model that can accurately and, more importantly, safely classify breast tumors as malignant or benign.
+*   **Models Used:** K-Nearest Neighbors (KNN), Logistic Regression
+*   **Key Steps & Findings:**
+    *   **Problem Framing:** Identified that for this medical diagnosis task, minimizing **False Negatives** (failing to detect a malignant tumor) is far more critical than overall accuracy.
+    *   **Baseline Modeling:** A tuned KNN model achieved 95.6% accuracy but produced 3 dangerous False Negatives.
+    *   **Iterative Improvement:** A baseline Logistic Regression model immediately improved results, reducing False Negatives to 1.
+    *   **Goal-Oriented Tuning:** Used `GridSearchCV` to optimize the Logistic Regression model, but with a crucial change: the scoring metric was set to **'recall'** instead of 'accuracy'. This explicitly instructed the model to prioritize finding all malignant cases.
+*   **Result:** The final, tuned model achieved **100% recall** for the malignant class, successfully eliminating all False Negatives. This demonstrated a practical understanding of the **Precision-Recall trade-off**, accepting a few manageable False Positives in exchange for maximum patient safety.
+
+### 2. Iris Species Classification
+
+*   **Notebook:** `iris-classification-project/iris_prediction.ipynb`
 *   **Objective:** To build a model that can accurately classify the species of an iris flower (*setosa*, *versicolor*, or *virginica*) based on its sepal and petal measurements.
 *   **Model Used:** K-Nearest Neighbors (KNN)
-*   **Key Steps:**
-    *   **Exploratory Data Analysis (EDA):** Investigated feature distributions and the relationships between them, revealing strong correlations between petal measurements and the target species.
-    *   **Preprocessing:** Applied `StandardScaler` to the features. This is a crucial step that prevents features with larger scales from disproportionately influencing the distance calculations in the KNN algorithm.
-    *   **Modeling & Evaluation:** Trained a `KNeighborsClassifier` and evaluated its performance using a confusion matrix and classification report, achieving an initial accuracy score.
-    *   **Hyperparameter Tuning:** Systematically tested different values for `k` (n_neighbors) to find the optimal balance between bias and variance, which improved the model's final predictive accuracy.
-*   **Result:** The final model achieved an accuracy of [Your Final Accuracy]% on the test set.
+*   **Key Steps & Findings:**
+    *   **EDA & Visualization:** Investigated feature distributions and relationships, identifying petal dimensions as highly predictive.
+    *   **Robust Evaluation:** Demonstrated the weakness of a single train-test split by showing how "lucky splits" can give misleading accuracy scores.
+    *   **Hyperparameter Tuning with Cross-Validation:** Used 10-fold cross-validation to find the optimal `k` (n_neighbors), resulting in a more reliable and generalizable model.
+*   **Result:** The final model, tuned with robust methods, achieved an average cross-validated accuracy of **96.0%**.
 
 ---
 
