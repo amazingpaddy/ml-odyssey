@@ -35,7 +35,7 @@ Below is a summary of the projects included in this repository. Each project inc
 
 ### 1. Breast Cancer Classification: A Study in Model Responsibility
 
-*   **Notebook:** [`breast-cancer-classification-project/breast_cancer_prediction.ipynb`](./breast-cancer-classification-project/breast_cancer_prediction.ipynb)
+*   **Notebook:** [`breast-cancer-classification-project/breast_cancer_prediction.ipynb`](./machine-learning-portfolio/breast-cancer-classification-project/breast_cancer_prediction.ipynb)
 *   **Objective:** To build a model that can accurately and, more importantly, safely classify breast tumors as malignant or benign.
 *   **Models Used:** K-Nearest Neighbors (KNN), Logistic Regression
 *   **Key Steps & Findings:**
@@ -47,7 +47,7 @@ Below is a summary of the projects included in this repository. Each project inc
 
 ### 2. Iris Species Classification
 
-*   **Notebook:** [`iris-classification-project/iris_prediction.ipynb`](./iris-classification-project/iris_prediction.ipynb)
+*   **Notebook:** [`iris-classification-project/iris_prediction.ipynb`](./machine-learning-portfolio/iris-classification-project/iris_prediction.ipynb)
 *   **Objective:** To build a model that can accurately classify the species of an iris flower (*setosa*, *versicolor*, or *virginica*) based on its sepal and petal measurements.
 *   **Model Used:** K-Nearest Neighbors (KNN)
 *   **Key Steps & Findings:**
