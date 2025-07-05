@@ -47,7 +47,7 @@ Below is a summary of the projects included in this repository. Each project inc
 
 ### 2. Iris Species Classification
 
-*   **Notebook:** `iris-classification-project/iris_prediction.ipynb`
+*   **Notebook:** [`iris-classification-project/iris_prediction.ipynb`](./iris-classification-project/iris_prediction.ipynb)
 *   **Objective:** To build a model that can accurately classify the species of an iris flower (*setosa*, *versicolor*, or *virginica*) based on its sepal and petal measurements.
 *   **Model Used:** K-Nearest Neighbors (KNN)
 *   **Key Steps & Findings:**
