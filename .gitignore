@@ -208,4 +208,6 @@ __marimo__/
 .DS_Store
 /.idea
 /.github/copilot-instructions.md
-.vscode
+/.vscode
+**/*.png
+**/*.md

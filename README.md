@@ -56,6 +56,20 @@ Below is a summary of the projects included in this repository. Each project inc
     *   **Hyperparameter Tuning with Cross-Validation:** Used 10-fold cross-validation to find the optimal `k` (n_neighbors), resulting in a more reliable and generalizable model.
 *   **Result:** The final model, tuned with robust methods, achieved an average cross-validated accuracy of **96.0%**.
 
+### 3. House Sales Price Prediction: Advanced Regression & Feature Engineering
+
+*   **Notebook:** [`house-sales-price-prediction/house-sales-price-prediction.ipynb`](./machine-learning-portfolio/house-sales-price-prediction/house-sales-price-prediction.ipynb)
+*   **Objective:** To predict house sale prices using a rich set of features, advanced preprocessing, and robust regression modeling.
+*   **Key Steps & Findings:**
+    *   **Exploratory Data Analysis:** Visualized the distribution of sale prices, identified right-skewness, and applied a log transformation to normalize the target variable.
+    *   **Missing Value Handling:** Used context-aware strategies, such as imputing missing `LotFrontage` values with the median per neighborhood and filling categorical "missing" with `"None"` where appropriate.
+    *   **Feature Engineering:** Created new features like `TotalSF` (total square footage), `HouseAge`, `TotalBathrooms`, and binary indicators for amenities (e.g., pool, garage, second floor).
+    *   **Encoding:** Applied one-hot encoding to all categorical variables, leveraging pandas' memory-efficient boolean dummies.
+    *   **Modeling:** Built a baseline `RandomForestRegressor` model, achieving a validation RMSE of **0.1448** on the log-transformed target.
+    *   **Feature Importance Analysis:** Confirmed that engineered features like `TotalSF` and domain-relevant variables such as `OverallQual` were top predictors.
+    *   **Hyperparameter Tuning:** Used `GridSearchCV` for systematic tuning, finding that the baseline model was already near-optimal for this dataset.
+*   **Result:** Developed a robust regression pipeline with strong feature engineering and careful preprocessing, achieving a competitive RMSE and demonstrating best practices for real-world regression problems.
+
 ---
 
 *(More projects, including deep learning applications, will be added here as they are completed...)*
