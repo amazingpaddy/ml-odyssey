@@ -58,17 +58,19 @@ Below is a summary of the projects included in this repository. Each project inc
 
 ### 3. House Sales Price Prediction: Advanced Regression & Feature Engineering
 
+
 *   **Notebook:** [`house-sales-price-prediction/house-sales-price-prediction.ipynb`](./machine-learning-portfolio/house-sales-price-prediction/house-sales-price-prediction.ipynb)
-*   **Objective:** To predict house sale prices using a rich set of features, advanced preprocessing, and robust regression modeling.
+*   **Status:** Completed
+*   **Objective:** Predict house sale prices in Ames, Iowa using advanced regression, feature engineering, and rigorous data cleaning.
 *   **Key Steps & Findings:**
-    *   **Exploratory Data Analysis:** Visualized the distribution of sale prices, identified right-skewness, and applied a log transformation to normalize the target variable.
-    *   **Missing Value Handling:** Used context-aware strategies, such as imputing missing `LotFrontage` values with the median per neighborhood and filling categorical "missing" with `"None"` where appropriate.
-    *   **Feature Engineering:** Created new features like `TotalSF` (total square footage), `HouseAge`, `TotalBathrooms`, and binary indicators for amenities (e.g., pool, garage, second floor).
-    *   **Encoding:** Applied one-hot encoding to all categorical variables, leveraging pandas' memory-efficient boolean dummies.
-    *   **Modeling:** Built a baseline `RandomForestRegressor` model, achieving a validation RMSE of **0.1448** on the log-transformed target.
-    *   **Feature Importance Analysis:** Confirmed that engineered features like `TotalSF` and domain-relevant variables such as `OverallQual` were top predictors.
-    *   **Hyperparameter Tuning:** Used `GridSearchCV` for systematic tuning, finding that the baseline model was already near-optimal for this dataset.
-*   **Result:** Developed a robust regression pipeline with strong feature engineering and careful preprocessing, achieving a competitive RMSE and demonstrating best practices for real-world regression problems.
+    *   **Data Cleaning & Imputation:** Addressed missing values in 19 columns, including intelligent imputation of `LotFrontage` using neighborhood medians and careful handling of categorical/numerical inconsistencies.
+    *   **Feature Engineering:** Created impactful features such as `TotalSF` (total square footage), `HouseAge`, and `TotalBathrooms`, which proved highly predictive.
+    *   **EDA & Visualization:** Explored distributions, relationships, and handled skewness in the target variable with log transformation.
+    *   **Modeling:**
+        - **Random Forest Regressor:** Established a strong baseline (RMSE: 0.1448, log scale). Hyperparameter tuning did not yield further improvement.
+        - **XGBoost Regressor:** Outperformed Random Forest immediately (baseline RMSE: 0.1422, log scale). Further hyperparameter tuning reduced RMSE to **0.1259** (log scale).
+    *   **Interpretation:** Converted predictions back to dollar values for stakeholder-friendly reporting. Final RMSE in dollars: **$26,363.22**.
+*   **Result:** The final model (tuned XGBoost) predicts house prices within ~$26,000 of actual sale prices on average, demonstrating a robust, production-ready regression pipeline and best practices for real-world tabular data science.
 
 ---
 
